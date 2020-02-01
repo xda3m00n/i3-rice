@@ -1,0 +1,3 @@
+#!/bin/bash
+
+printf 'n' | apt-get upgrade | grep -o -P ".{0,4}not upgraded" | sed 's/[^0-9]*//g'
